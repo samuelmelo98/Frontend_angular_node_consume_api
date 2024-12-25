@@ -1,0 +1,26 @@
+<div>
+    <h2>Lista de Tarefas</h2>
+    <table border="1" style="width: 100%; text-align: left;">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Usuário</th>
+          <th>Título</th>
+          <th>Completado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Loop para exibir os dados, os dados vem da variavel chamada dados da classe que controla o componente -->
+        <tr *ngFor="let person of dados">
+          <td>{{ person.id }}</td>
+          <td>{{ person.userId }}</td>
+          <td>{{ person.title }}</td>
+          <td>
+            <span *ngIf="person.completed; else notCompleted">✔️</span>
+            <ng-template #notCompleted>❌</ng-template>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
