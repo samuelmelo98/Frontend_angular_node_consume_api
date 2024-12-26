@@ -331,6 +331,20 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<app-loader [isLoading]="isLoading"></app-loader>
 
-<app-pessoa></app-pessoa>
+<div style="text-align: center; margin-top: 20px;">
+  <button (click)="fetchData()">Carregar Dados</button>
+</div>
+
+<div style="text-align: center; margin-top: 20px;">
+  <button (click)="navigateToAdd()">Adicionar Pesssoa</button>
+  <button (click)="navigateToLista()">Lista</button>
+</div>
+
+<!-- Aqui ficará o conteúdo da rota -->
+<router-outlet></router-outlet>
+
+
+
 <router-outlet />

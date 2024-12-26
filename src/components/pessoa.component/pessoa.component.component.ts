@@ -22,7 +22,7 @@ export class PessoaComponent implements OnInit {
 
   ngOnInit(): void {
     //this.loadPersons(); // Chama o método ao inicializar o componente
-    this.carrega();
+    this.loadPersons();
   }
 
   carrega(): void {

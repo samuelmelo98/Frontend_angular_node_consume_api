@@ -1,0 +1,57 @@
+/* Estilo do container principal */
+.form-container {
+    width: 300px;
+    margin: 0 auto;
+  }
+  
+  form div {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  input {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo da notificação */
+  .notification {
+    position: fixed; /* Fixa no canto da tela */
+    bottom: 20px; /* Distância do canto inferior */
+    right: 20px; /* Distância do canto direito */
+    background-color: #dc3545; /* Vermelho para destaque */
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+    animation: fadeInOut 10s forwards;
+  }
+  
+  /* Animação para sumir após 3 segundos */
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    10% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  }
+  
