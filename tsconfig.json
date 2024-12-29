@@ -1,5 +1,5 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
+  /* To learn more about this file see: https://angular.io/config/tsconfig. */
   "compileOnSave": false,
   "compilerOptions": {
     "outDir": "./dist/out-tsc",
@@ -8,20 +8,24 @@
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
+    "skipLibCheck": true,                // Mantém ignorância de verificações em bibliotecas
+    "esModuleInterop": true,             // Garante compatibilidade com módulos ES
+    "allowSyntheticDefaultImports": true, // Permite importações padrão sintéticas
     "sourceMap": true,
     "declaration": false,
     "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,       // Necessário para bibliotecas baseadas em decoradores
     "moduleResolution": "node",
     "importHelpers": true,
+    "resolveJsonModule": true,           // Permite importar arquivos JSON
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "types": ["node"]                    // Adiciona tipos do Node.js para maior compatibilidade
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

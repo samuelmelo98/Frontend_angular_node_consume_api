@@ -7,14 +7,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoaderComponent } from './loader/loader.component';
 import { Router } from '@angular/router';
 import { routes } from './app.routes';
-
+import { Title } from '@angular/platform-browser';  // Certifique-se de que está importando do pacote correto
 
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,HttpClientModule,PessoaComponent,LoaderComponent,],
+  imports: [RouterOutlet,HttpClientModule,LoaderComponent,],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
  // schemas: [NO_ERRORS_SCHEMA]  // Adicionando NO_ERRORS_SCHEMA
@@ -22,7 +22,11 @@ import { routes } from './app.routes';
 export class AppComponent {
   title = 'meu-projeto';
   isLoading: boolean = false;
-  constructor(private router: Router) {}
+  constructor(private router: Router, private titleService: Title) {
+// Definindo o título inicial da página
+this.titleService.setTitle('Meu Aplicativo Angular');
+
+  }
 
 
   fetchData() {
@@ -42,5 +46,15 @@ console.log("teste");
 // Método para navegar para a rota 'about'
 navigateToLista() {
   this.router.navigate(['/pessoas']);
+}
+
+// Método para mudar dinamicamente o título
+updateTitle(newTitle: string) {
+  this.titleService.setTitle(newTitle);
+}
+
+// Método para navegar para a rota 'about'
+navigateToRelatorio() {
+  this.router.navigate(['/relatorio']);
 }
 }

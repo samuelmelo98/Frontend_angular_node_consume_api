@@ -1,0 +1,31 @@
+/* Estilo do cabeçalho */
+.header {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  color: #4CAF50;
+  margin-bottom: 15px;
+}
+
+/* Estilo do subcabeçalho */
+.subheader {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+/* Estilo da tabela */
+.table {
+  font-size: 12px;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+/* Estilo da lista */
+.list {
+  font-size: 14px;
+  color: #555555;
+  margin-bottom: 10px;
+}
