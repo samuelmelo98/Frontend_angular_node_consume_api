@@ -57,4 +57,7 @@ updateTitle(newTitle: string) {
 navigateToRelatorio() {
   this.router.navigate(['/relatorio']);
 }
+navigateToRelatorioHtmlPdf() {
+  this.router.navigate(['/html-pdf_relatorio']);
+}
 }

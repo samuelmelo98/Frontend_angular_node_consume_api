@@ -1,0 +1,53 @@
+<div #relatorioContent class="relatorio-container">
+  <!-- Cabeçalho do Relatório -->
+  <header class="relatorio-header">
+    <h1>Relatório Completo</h1>
+    <p class="data-geracao">Data de Geração: {{ dataAtual }}</p>
+  </header>
+
+  <!-- Corpo do Relatório -->
+  <main class="relatorio-body">
+    <section class="introducao">
+      <h2>Introdução</h2>
+      <p>
+        Este relatório apresenta um resumo das atividades realizadas, métricas coletadas e conclusões obtidas durante o período avaliado.
+      </p>
+    </section>
+
+    <section class="dados">
+      <h2>Dados</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Indicador</th>
+            <th>Valor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Indicador 1</td>
+            <td>123</td>
+          </tr>
+          <tr>
+            <td>Indicador 2</td>
+            <td>456</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="conclusao">
+      <h2>Conclusão</h2>
+      <p>
+        A análise dos dados indica uma tendência de crescimento significativo. Recomenda-se continuar monitorando os indicadores regularmente.
+      </p>
+    </section>
+  </main>
+
+  <!-- Rodapé do Relatório -->
+  <footer class="relatorio-footer">
+    <p>Relatório gerado automaticamente. © 2024 Meu Projeto.</p>
+  </footer>
+</div>
+
+<button (click)="gerarRelatorio()">Gerar PDF</button>
