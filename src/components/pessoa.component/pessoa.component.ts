@@ -1,22 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import { AppComponent } from '../../app/app.component';
 import { ServicoPessoaService } from '../../servicos/servico.pessoa.service';
 import { CommonModule } from '@angular/common';
+import { UsersComponent } from "../users/users.component";
 
 
 @Component({
   selector: 'app-pessoa',
   standalone: true,
-  imports: [CommonModule],
-  templateUrl: './pessoa.component.component.html',
-  styleUrl: './pessoa.component.component.css',
-  providers:[ServicoPessoaService]
-  
+  imports: [CommonModule, UsersComponent],
+  templateUrl: './pessoa.component.html',
+  styleUrl: './pessoa.component.css',
+  providers:[ServicoPessoaService,UsersComponent]
+    
 })
 
 export class PessoaComponent implements OnInit {
 
   dados: any[] = [];
+  dados2: any[] =['1','2','3'];
 
   constructor(private servicoPessoa: ServicoPessoaService){}
 

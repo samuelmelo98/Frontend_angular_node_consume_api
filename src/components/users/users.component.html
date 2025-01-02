@@ -1,0 +1,23 @@
+<div>
+    <h2>Lista de Tarefas</h2>
+    <table border="1" style="width: 100%; text-align: left;">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Usuário</th>
+          <th>Título</th>
+          <th>Completado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Loop para exibir os dados, os dados vem da variavel chamada dados da classe que controla o componente -->
+        <tr *ngFor="let user of users">
+          <td>{{ user.idUser }}</td>
+          <td>{{ user.nome }}</td>
+          <td>{{ user.sobreNome }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  

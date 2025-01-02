@@ -1,20 +1,21 @@
 
 import { Component, NgModule } from '@angular/core';
 import { RouterOutlet, Routes } from '@angular/router';
-import { PessoaComponent} from '../components/pessoa.component/pessoa.component.component';
+import { PessoaComponent} from '../components/pessoa.component/pessoa.component';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { LoaderComponent } from './loader/loader.component';
 import { Router } from '@angular/router';
 import { routes } from './app.routes';
-import { Title } from '@angular/platform-browser';  // Certifique-se de que está importando do pacote correto
+import { Title } from '@angular/platform-browser';
+import { UsersComponent } from "../components/users/users.component";  // Certifique-se de que está importando do pacote correto
 
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,HttpClientModule,LoaderComponent,],
+  imports: [RouterOutlet, HttpClientModule, LoaderComponent, UsersComponent,UsersComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
  // schemas: [NO_ERRORS_SCHEMA]  // Adicionando NO_ERRORS_SCHEMA

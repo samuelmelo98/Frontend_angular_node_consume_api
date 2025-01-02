@@ -1,3 +1,7 @@
+
+<div>
+  <app-users></app-users>
+</div>
 <div>
     <h2>Lista de Tarefas</h2>
     <table border="1" style="width: 100%; text-align: left;">
@@ -22,5 +26,11 @@
         </tr>
       </tbody>
     </table>
+  </div>
+  <div>
+    <tr *ngFor="let varLocal of dados2">
+        <td>{{varLocal}}</td>
+        <td>[(varLocal)]</td>
+    </tr>
   </div>
   

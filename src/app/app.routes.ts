@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { PessoaComponent } from '../components/pessoa.component/pessoa.component.component';
+import { PessoaComponent } from '../components/pessoa.component/pessoa.component';
 import { PessoaFormComponent } from './components/pessoa-form/pessoa-form.component';
 import { RelatorioComponent } from './relatorio/relatorio.component';
 import { RelatorioHtmlPdfComponent } from './relatorio-html-pdf/relatorio-html-pdf.component';
